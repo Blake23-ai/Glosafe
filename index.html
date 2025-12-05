@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GloSafe — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <!-- Logo: glowing bulb with GloSafe text -->
+      <svg class="logo" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- bulb -->
+        <g filter="url(#glow)">
+          <ellipse cx="35" cy="24" rx="16" ry="18" fill="#0ef36a"/>
+          <rect x="29" y="38" width="12" height="8" rx="2" fill="#cccccc"/>
+          <text x="58" y="32" font-family="Verdana, sans-serif" font-size="14" fill="#0ef36a" font-weight="700">GloSafe</text>
+        </g>
+      </svg>
+    </div>
+    <h1 class="brand">GloSafe</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <!-- Clickable image that leads to product page -->
+      <a href="product.html" class="product-link" aria-label="Open product page for Glow cuff">
+        <img src="assets/glow-cuff-placeholder.jpg" alt="Glow in the dark arm cuff (BDB letters visible where cuff does not glow)" class="cuff-image"/>
+      </a>
+    </section>
+
+    <!-- Video section (under the original picture) -->
+    <section class="video-section" aria-label="Safety video">
+      <h2>Safety story</h2>
+      <!-- IMPORTANT: replace this with an animated or licensed stock clip instead of real footage of a child -->
+      <!-- Example uses a local file; can also use an embedded Youtube link -->
+      <video controls playsinline poster="assets/video-poster.jpg" class="safety-video">
+        <source src="assets/safety-demo-placeholder.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="video-caption">
+        (Replace with an animated or licensed reenactment. Do not publish real footage of a child in danger without full consent.)
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> GloSafe — Glow for safety</p>
+  </footer>
+
+  <script>
+    // small script to set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
